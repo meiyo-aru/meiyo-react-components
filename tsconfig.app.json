@@ -6,16 +6,11 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    // REMOVA OU COMENTE ESTA LINHA: "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -23,12 +18,15 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    // *** ADICIONE ESTAS LINHAS PARA GERAR AS DECLARAÇÕES DE TIPO ***
-    "declaration": true,          // Permite a geração de arquivos .d.ts
-    "declarationMap": true,       // Gera arquivos de mapa para os .d.ts (útil para depuração)
-    "emitDeclarationOnly": true,  // Garante que o tsc *apenas* gere os .d.ts, sem gerar JS
-    "outDir": "./dist"            // Onde o tsc irá colocar os arquivos .d.ts gerados
-    // ***************************************************************
+    "declaration": true,        
+    "declarationMap": true,      
+    "emitDeclarationOnly": true,  
+    "outDir": "./dist",
+    "types": [
+      "vitest/globals", 
+      "@testing-library/jest-dom" 
+    ],
+
   },
   "include": ["src"]
 }
