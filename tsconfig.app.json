@@ -12,7 +12,7 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    // REMOVA OU COMENTE ESTA LINHA: "noEmit": true,
     "jsx": "react-jsx",
 
     /* Linting */
@@ -21,7 +21,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    // *** ADICIONE ESTAS LINHAS PARA GERAR AS DECLARAÇÕES DE TIPO ***
+    "declaration": true,          // Permite a geração de arquivos .d.ts
+    "declarationMap": true,       // Gera arquivos de mapa para os .d.ts (útil para depuração)
+    "emitDeclarationOnly": true,  // Garante que o tsc *apenas* gere os .d.ts, sem gerar JS
+    "outDir": "./dist"            // Onde o tsc irá colocar os arquivos .d.ts gerados
+    // ***************************************************************
   },
   "include": ["src"]
 }
