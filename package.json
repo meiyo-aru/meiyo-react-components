@@ -1,8 +1,23 @@
 {
   "name": "meiyo-react-components",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A library of react components for reuse in my projects.",
+  "keywords": ["react", "components", "typescript", "ui-library"],
+  "author": "Pedro Arthur Gregorio Abreu <pedro.agb2004@gmail.com>",
+  "homepage": "https://github.com/meiyo-aru/meiyo-react-components",
+  "bugs": {
+    "url": "https://github.com/meiyo-aru/meiyo-react-components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meiyo-aru/meiyo-react-components.git"
+  },
   "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,7 +26,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
