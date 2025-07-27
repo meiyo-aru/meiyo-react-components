@@ -1,7 +1,7 @@
 {
   "name": "meiyo-react-components",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A library of react components for reuse in my projects.",
   "keywords": ["react", "components", "typescript", "ui-library"],
   "author": "Pedro Arthur Gregorio Abreu <pedro.agb2004@gmail.com>",
