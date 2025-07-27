@@ -1,53 +1,53 @@
 # `meiyo-react-components`
 
-Uma biblioteca de componentes React modernos e acessíveis, construída com TypeScript e Vite. Focada em fornecer blocos de UI reutilizáveis e de alta qualidade para suas aplicações React.
+A library of modern and accessible React components, built with TypeScript and Vite. Focused on providing high-quality, reusable UI blocks for your React applications.
 
------
+---
 
-## Recursos
+## Features
 
-  * **Componentes Reutilizáveis:** Conjunto de componentes React prontos para uso.
-  * **Desenvolvimento com TypeScript:** Totalmente tipado para segurança e melhor experiência do desenvolvedor.
-  * **Performático:** Construído com [Vite](https://vitejs.dev/), garantindo builds rápidos e uma experiência de desenvolvimento ágil.
-  * **Testes Robustos:** Cobertura de testes com [Vitest](https://vitest.dev/) para garantir a estabilidade e confiabilidade.
-  * **Documentação Interativa:** Desenvolvido e documentado com [Storybook](https://storybook.js.org/), facilitando a visualização e o uso dos componentes.
-  * **Fácil de Integrar:** Design minimalista e extensível, permitindo fácil personalização e integração em qualquer projeto React.
+* **Reusable Components:** A set of ready-to-use React components.
+* **TypeScript Development:** Fully typed for safety and an improved developer experience.
+* **Performant:** Built with [Vite](https://vitejs.dev/), ensuring fast builds and an agile development experience.
+* **Robust Tests:** Test coverage with [Vitest](https://vitest.dev/) to ensure stability and reliability.
+* **Interactive Documentation:** Developed and documented with [Storybook](https://storybook.js.org/), making component visualization and usage easy.
+* **Easy to Integrate:** Minimalist and extensible design, allowing for easy customization and integration into any React project.
 
------
+---
 
-## Instalação
+## Installation
 
-Você pode instalar `meiyo-react-components` via npm ou yarn:
+You can install `meiyo-react-components` via npm or yarn:
 
 ```bash
 npm install meiyo-react-components
-# ou
+# or
 yarn add meiyo-react-components
-# ou
+# or
 pnpm add meiyo-react-components
-```
+````
 
 -----
 
-## Como Usar
+## How to Use
 
-Importe os componentes diretamente da biblioteca e utilize-os em suas aplicações React.
+Import components directly from the library and use them in your React applications.
 
 ```tsx
 import React from 'react';
-import { Button, Input } from 'meiyo-react-components'; // Altere para o nome real da sua biblioteca
+import { Button, Input } from 'meiyo-react-components'; // Change to your library's actual name
 
 function MyApp() {
   return (
     <div>
-      <Button onClick={() => alert('Clicado!')}>
-        Clique-me
+      <Button onClick={() => alert('Clicked!')}>
+        Click me
       </Button>
       <Input
-        placeholder="Digite algo..."
+        placeholder="Type something..."
         onChange={(e) => console.log(e.target.value)}
       />
-      {/* Adicione mais exemplos de seus componentes aqui */}
+      {/* Add more examples of your components here */}
     </div>
   );
 }
@@ -57,70 +57,70 @@ export default MyApp;
 
 -----
 
-## Documentação (Storybook)
+## Documentation (Storybook)
 
-Explore todos os componentes, suas propriedades (props) e exemplos de uso na documentação interativa no Storybook.
+Explore all components, their properties (props), and usage examples in the interactive documentation on Storybook.
 
-Para iniciar o Storybook localmente:
+To start Storybook locally:
 
 ```bash
 npm run storybook
-# ou
+# or
 yarn storybook
-# ou
+# or
 pnpm storybook
 ```
 
-Isso abrirá o Storybook em seu navegador (geralmente em `http://localhost:6006`).
+This will open Storybook in your browser (usually at `http://localhost:6006`).
 
 -----
 
-## Desenvolvimento Local
+## Local Development
 
-Se você deseja contribuir ou testar a biblioteca localmente:
+If you wish to contribute or test the library locally:
 
-1.  **Clone o repositório:**
+1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/meiyo-aru/meiyo-react-components.git # Atualize com o link do seu repositório
+    git clone [https://github.com/meiyo-aru/meiyo-react-components.git](https://github.com/meiyo-aru/meiyo-react-components.git) # Update with your repository link
     cd meiyo-react-components
     ```
 
-2.  **Instale as dependências:**
+2.  **Install dependencies:**
 
     ```bash
     npm install
-    # ou
+    # or
     yarn install
-    # ou
+    # or
     pnpm install
     ```
 
-3.  **Scripts Úteis:**
+3.  **Useful Scripts:**
 
-      * **Iniciar modo de desenvolvimento (Vite):**
+      * **Start development mode (Vite):**
         ```bash
         npm run dev
         ```
-        (Isso é mais para testar o bundle do que a biblioteca em si, o Storybook é o ideal para o desenvolvimento de componentes).
-      * **Rodar testes:**
+        (This is primarily for testing the bundle rather than the library itself; Storybook is ideal for component development).
+      * **Run tests:**
         ```bash
         npm test
         ```
-      * **Buildar a biblioteca para produção:**
+      * **Build the library for production:**
         ```bash
         npm run build
         ```
-      * **Buildar o Storybook para deploy:**
+      * **Build Storybook for deploy:**
         ```bash
         npm run build-storybook
         ```
 
 -----
 
-## Testes
+## Tests
 
-Os testes são escritos com [Vitest](https://vitest.dev/) e `@testing-library/react`. Para rodar todos os testes:
+Tests are written with [Vitest](https://vitest.dev/) and `@testing-library/react`. To run all tests:
 
 ```bash
 npm test
@@ -128,30 +128,30 @@ npm test
 
 -----
 
-## Contribuição
+## Contribution
 
-Contribuições são sempre bem-vindas\! Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias.
+Contributions are always welcome\! Feel free to open issues, submit pull requests, or suggest improvements.
 
-1.  Faça um fork do repositório.
-2.  Crie uma nova branch para sua feature (`git checkout -b feature/minha-feature`).
-3.  Faça suas alterações e adicione testes.
-4.  Certifique-se de que todos os testes passem e o linter não aponte erros.
-5.  Envie suas alterações (`git commit -am 'feat: Adiciona nova feature'`).
-6.  Envie sua branch para o GitHub (`git push origin feature/minha-feature`).
-7.  Abra um Pull Request.
-
------
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+1.  Fork the repository.
+2.  Create a new branch for your feature (`git checkout -b feature/my-feature`).
+3.  Make your changes and add tests.
+4.  Ensure all tests pass and the linter shows no errors.
+5.  Commit your changes (`git commit -am 'feat: Add new feature'`).
+6.  Push your branch to GitHub (`git push origin feature/my-feature`).
+7.  Open a Pull Request.
 
 -----
 
-## Contato
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for more details.
+
+-----
+
+## Contact
 
 Pedro Arthur Gregorio Abreu - [pedro.agb2004@gmail.com](mailto:pedro.agb2004@gmail.com)
 
-Link do GitHub: [https://github.com/meiyo-aru/meiyo-react-components](https://github.com/meiyo-aru/meiyo-react-components)
+GitHub Link: [https://github.com/meiyo-aru/meiyo-react-components](https://github.com/meiyo-aru/meiyo-react-components)
 
 -----
