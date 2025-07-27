@@ -1,12 +1,17 @@
 {
   "name": "meiyo-react-components",
-  "main": "./dist/meiyo-react-components.umd.js",   
-  "module": "./dist/meiyo-react-components.es.js",    
-  "types": "./dist/meiyo-react-components.es.d.ts",                     
+  "main": "./dist/meiyo-react-components.umd.js",
+  "module": "./dist/meiyo-react-components.es.js",
+  "types": "./dist/meiyo-react-components.es.d.ts",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A library of react components for reuse in my projects.",
-  "keywords": ["react", "components", "typescript", "ui-library"],
+  "keywords": [
+    "react",
+    "components",
+    "typescript",
+    "ui-library"
+  ],
   "author": "Pedro Arthur Gregorio Abreu <pedro.agb2004@gmail.com>",
   "homepage": "https://github.com/meiyo-aru/meiyo-react-components",
   "bugs": {
