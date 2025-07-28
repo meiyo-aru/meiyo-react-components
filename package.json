@@ -5,6 +5,7 @@
   "types": "./dist/meiyo-react-components.es.d.ts",
   "private": false,
   "version": "0.2.0",
+  "version": "0.2.4",
   "description": "A library of react components for reuse in my projects.",
   "keywords": [
     "react",
@@ -32,6 +33,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
+    "prepublishOnly": "echo 'Iniciando o build da biblioteca antes da publicação...' && tsc --build tsconfig.app.json && vite build && echo 'Build da biblioteca concluído com sucesso!'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
