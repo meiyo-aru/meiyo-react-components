@@ -32,7 +32,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "prepublish": "tsc --build tsconfig.app.json && vite build",
+    "prepublishOnly": "echo 'Iniciando o build da biblioteca antes da publicação...' && tsc --build tsconfig.app.json && vite build && echo 'Build da biblioteca concluído com sucesso!'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
