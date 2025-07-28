@@ -1,13 +1,11 @@
-// vite.config.ts
 /// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
-import { resolve } from 'path'; // Já está no seu código
+import { resolve } from 'path';
 
-import path from 'node:path'; // Já está no seu código
-import { fileURLToPath } from 'node:url'; // Já está no seu código
-// import { storybookTest } from '@storybook/addon-vitest/vitest-plugin'; // Comentei para focar no build, se precisar descomente
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,14 +16,9 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      // --- ADICIONE OU AJUSTE ESTAS LINHAS ---
-      // 1. Explicitamente aponte para o tsconfig.app.json
-      tsconfigPath: './tsconfig.app.json', // <-- Garante que o dts use esta config para os tipos
-      // 2. Opcional: Especifique o diretório de saída dos tipos (geralmente 'dist')
-      outDir: 'dist',
-      // 3. Se ainda tiver problemas, tente rollupTypes: true (pode gerar um único .d.ts)
-      // rollupTypes: true,
-      // ------------------------------------
+      tsconfigPath: './tsconfig.app.json',
+      outDir: 'dist', 
+      rollupTypes: true,
     })
   ],
   build: {
@@ -45,6 +38,9 @@ export default defineConfig({
       },
     },
   },
-  // Seu objeto 'test' aqui, se precisar
-  // test: { ... }
+  test: {
+    globals:true,
+    setupFiles: ['./.storybook/vitest.setup.ts'],
+    environment: 'jsdom',              
+  }
 });
