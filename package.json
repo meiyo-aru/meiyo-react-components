@@ -4,7 +4,7 @@
   "module": "./dist/meiyo-react-components.es.js",
   "types": "./dist/meiyo-react-components.es.d.ts",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A library of react components for reuse in my projects.",
   "keywords": [
     "react",
