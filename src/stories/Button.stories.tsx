@@ -55,13 +55,13 @@ export const Warning: StoryObj<typeof Button> = {
 export const BoxShadow: StoryObj<typeof Button> = {
     args: {
         text: "Botão",
-        boxShadow: true
+        shadow: true
     }
 };
 
 export const Hover: StoryObj<typeof Button> = {
     args: {
         text: "Botão",
-        hover: true
+        transform: true
     }
 };
