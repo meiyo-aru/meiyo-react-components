@@ -8,15 +8,24 @@ interface ButtonProps {
     onMouseLeave?: React.MouseEventHandler,
     disabled?: boolean,
     type?: "primary" | "secondary" | "success" | "danger" | "warning",
-    boxShadow?: boolean,
-    hover?: boolean,
+    size?: "sm" | "md" | "lg",
+    shadow?: boolean,
+    transform?: boolean,
+    backgroundColor?: string
 }
 
 export const Button: React.FC<ButtonProps> = ({
     ...props
 }) => {
 
-    let type = style.primary;
+    const buttonClasses = [
+        props.type ? style[props.type] : style.primary,
+        props.size ? style[props.size] : style.md,
+        props.shadow && style.shadow,
+        props.transform && style.transform
+    ].filter(Boolean).join(" ")
+
+/*     let type = style.primary;
     switch (props.type) {
         case "secondary":
             type = style.secondary;
@@ -33,14 +42,15 @@ export const Button: React.FC<ButtonProps> = ({
         default:
             break;
     }
-
+ */
     return (
-        
+            
             props.disabled ?
-                    <button disabled={props.disabled}  className={`${style.disabled}`}>Disabled</button>
+                    <button disabled className={`${style.disabled} ${style[props.size ? props.size : "md"]}`}>Disabled</button>
                 :
                     <button 
-                    className={`${type} ${props.boxShadow && style.shadow} ${props.hover && style.hover}`} 
+                    style={{backgroundColor: props.backgroundColor}}
+                    className={buttonClasses}
                     onClick={props.onClick} 
                     onMouseEnter={props.onMouseEnter} 
                     onMouseLeave={props.onMouseLeave}
