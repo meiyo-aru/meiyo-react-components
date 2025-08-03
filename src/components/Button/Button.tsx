@@ -2,7 +2,7 @@ import type React from "react";
 import style from "./Button.module.scss"
 
 interface ButtonProps {
-    text: string,
+    content: string | React.ReactElement | React.HTMLElementType,
     onClick?: React.MouseEventHandler,
     onMouseEnter?: React.MouseEventHandler,
     onMouseLeave?: React.MouseEventHandler,
@@ -55,7 +55,7 @@ export const Button: React.FC<ButtonProps> = ({
                     onMouseEnter={props.onMouseEnter} 
                     onMouseLeave={props.onMouseLeave}
                     disabled={props.disabled}>
-                        {props.text}
+                        {props.content}
                     </button>
         
     );
