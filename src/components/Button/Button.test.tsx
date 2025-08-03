@@ -3,7 +3,7 @@ import { Button } from './Button';
 
 describe('Button', () => {
   it('should render the button with the correct text', () => {
-    render(<Button text="Comprar Agora" />);
+    render(<Button content="Comprar Agora" />);
     expect(screen.getByRole('button', { name: 'Comprar Agora' })).toBeInTheDocument();
   });
 
@@ -11,7 +11,7 @@ describe('Button', () => {
     const handleClick = vi.fn();
     const handleHover = vi.fn();
 
-    render(<Button text="Adicionar ao Carrinho" onClick={handleClick} onMouseEnter={handleHover} onMouseLeave={handleHover} />);
+    render(<Button content="Adicionar ao Carrinho" onClick={handleClick} onMouseEnter={handleHover} onMouseLeave={handleHover} />);
     const button = screen.getByRole('button', { name: 'Adicionar ao Carrinho' });
 
     fireEvent.click(button);
@@ -29,7 +29,7 @@ describe('Button', () => {
     const handleClick = vi.fn();
     const handleHover = vi.fn();
 
-    render(<Button text="Desabilitado" onClick={handleClick} onMouseEnter={handleHover} onMouseLeave={handleHover} disabled />);
+    render(<Button content="Desabilitado" onClick={handleClick} onMouseEnter={handleHover} onMouseLeave={handleHover} disabled />);
     const button = screen.getByRole('button', { name: 'Desabilitado' });
 
     fireEvent.click(button);
