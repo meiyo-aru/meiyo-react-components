@@ -11,7 +11,7 @@ export default meta;
 
 export const Primary: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         onClick: () => {
             console.log("Clicked!")
         },
@@ -26,42 +26,42 @@ export const Primary: StoryObj<typeof Button> = {
 
 export const Secondary: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         type: "secondary",
     }
 };
 
 export const Success: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         type: "success"
     }
 };
 
 export const Danger: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         type: "danger"
     }
 };
 
 export const Warning: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         type: "warning"
     }
 };
 
 export const BoxShadow: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         shadow: true
     }
 };
 
 export const Hover: StoryObj<typeof Button> = {
     args: {
-        text: "Botão",
+        content: "Botão",
         transform: true
     }
 };
